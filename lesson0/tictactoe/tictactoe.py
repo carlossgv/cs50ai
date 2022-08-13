@@ -130,6 +130,10 @@ def minimax(board):
     Returns the optimal action for the current player on the board.
     """
 
+    # check if the game is over
+    if terminal(board):
+        return None
+
     if player(board) == X:
         return max_value(board)
 
